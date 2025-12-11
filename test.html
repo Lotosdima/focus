@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Тест по формулам сокращенного умножения для учеников 10-11 классов">
+    <title>Тест: Формулы сокращенного умножения</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .question-card { transition: all 0.3s ease; }
+        .question-card:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .correct-answer { background-color: #10b981 !important; color: white !important; }
+        .wrong-answer { background-color: #ef4444 !important; color: white !important; }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Навигация -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <i class="fas fa-calculator text-2xl text-purple-600 mr-2"></i>
+                    <span class="text-xl font-bold text-gray-800">Тест по математике</span>
+                </div>
+                <a href="index.html" class="text-gray-700 hover:text-purple-600 transition">
+                    <i class="fas fa-home mr-2"></i>На главную
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Заголовок -->
+    <section class="gradient-bg text-white py-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-bold mb-4">Тест: Формулы сокращенного умножения</h1>
+            <p class="text-xl text-purple-100">Проверьте свои знания основных формул</p>
+        </div>
+    </section>
+
+    <!-- Форма теста -->
+    <section class="py-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <form id="testForm" class="space-y-8">
+                
+                <!-- Информация об ученике -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">Информация об ученике</h2>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block mb-2 font-semibold text-gray-700">Имя и фамилия *</label>
+                            <input type="text" id="studentName" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Иван Иванов">
+                        </div>
+                        <div>
+                            <label class="block mb-2 font-semibold text-gray-700">Класс *</label>
+                            <select id="studentClass" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                <option value="">Выберите класс</option>
+                                <option value="10">10 класс</option>
+                                <option value="11">11 класс</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block mb-2 font-semibold text-gray-700">Email *</label>
+                            <input type="email" id="studentEmail" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="ivan@example.com">
+                        </div>
+                        <div>
+                            <label class="block mb-2 font-semibold text-gray-700">Телефон</label>
+                            <input type="tel" id="studentPhone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="+7 (999) 123-45-67">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вопрос 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg question-card">
+                    <div class="flex items-start mb-4">
+                        <span class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">1</span>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-semibold mb-4 text-gray-800">Раскройте скобки: (a + b)² = ?</h3>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q1" value="a² + b²" class="mr-3" required>
+                                    <span>a² + b²</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q1" value="a² + 2ab + b²" class="mr-3">
+                                    <span>a² + 2ab + b²</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q1" value="a² - 2ab + b²" class="mr-3">
+                                    <span>a² - 2ab + b²</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q1" value="2a + 2b" class="mr-3">
+                                    <span>2a + 2b</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вопрос 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg question-card">
+                    <div class="flex items-start mb-4">
+                        <span class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">2</span>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-semibold mb-4 text-gray-800">Раскройте скобки: (a - b)² = ?</h3>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q2" value="a² + b²" class="mr-3" required>
+                                    <span>a² + b²</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q2" value="a² - 2ab + b²" class="mr-3">
+                                    <span>a² - 2ab + b²</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q2" value="a² + 2ab + b²" class="mr-3">
+                                    <span>a² + 2ab + b²</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q2" value="a² - b²" class="mr-3">
+                                    <span>a² - b²</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вопрос 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg question-card">
+                    <div class="flex items-start mb-4">
+                        <span class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">3</span>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-semibold mb-4 text-gray-800">Раскройте скобки: (a + b)(a - b) = ?</h3>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q3" value="a² + b²" class="mr-3" required>
+                                    <span>a² + b²</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q3" value="a² - b²" class="mr-3">
+                                    <span>a² - b²</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q3" value="2a - 2b" class="mr-3">
+                                    <span>2a - 2b</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q3" value="a² - 2ab + b²" class="mr-3">
+                                    <span>a² - 2ab + b²</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вопрос 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg question-card">
+                    <div class="flex items-start mb-4">
+                        <span class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">4</span>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-semibold mb-4 text-gray-800">Раскройте скобки: (a + b)³ = ?</h3>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q4" value="a³ + b³" class="mr-3" required>
+                                    <span>a³ + b³</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q4" value="a³ + 3a²b + 3ab² + b³" class="mr-3">
+                                    <span>a³ + 3a²b + 3ab² + b³</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q4" value="a³ - 3a²b + 3ab² - b³" class="mr-3">
+                                    <span>a³ - 3a²b + 3ab² - b³</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q4" value="3a + 3b" class="mr-3">
+                                    <span>3a + 3b</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вопрос 5 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg question-card">
+                    <div class="flex items-start mb-4">
+                        <span class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">5</span>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-semibold mb-4 text-gray-800">Раскройте скобки: (a - b)³ = ?</h3>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q5" value="a³ - b³" class="mr-3" required>
+                                    <span>a³ - b³</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q5" value="a³ - 3a²b + 3ab² - b³" class="mr-3">
+                                    <span>a³ - 3a²b + 3ab² - b³</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q5" value="a³ + 3a²b + 3ab² + b³" class="mr-3">
+                                    <span>a³ + 3a²b + 3ab² + b³</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q5" value="a³ - 3ab + b³" class="mr-3">
+                                    <span>a³ - 3ab + b³</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вопрос 6 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg question-card">
+                    <div class="flex items-start mb-4">
+                        <span class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">6</span>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-semibold mb-4 text-gray-800">Разложите на множители: a² - b² = ?</h3>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q6" value="(a + b)(a - b)" class="mr-3" required>
+                                    <span>(a + b)(a - b)</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q6" value="(a - b)²" class="mr-3">
+                                    <span>(a - b)²</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q6" value="(a + b)²" class="mr-3">
+                                    <span>(a + b)²</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q6" value="a² - 2ab + b²" class="mr-3">
+                                    <span>a² - 2ab + b²</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вопрос 7 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg question-card">
+                    <div class="flex items-start mb-4">
+                        <span class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">7</span>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-semibold mb-4 text-gray-800">Разложите на множители: a³ + b³ = ?</h3>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q7" value="(a + b)(a² - ab + b²)" class="mr-3" required>
+                                    <span>(a + b)(a² - ab + b²)</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q7" value="(a - b)(a² + ab + b²)" class="mr-3">
+                                    <span>(a - b)(a² + ab + b²)</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q7" value="(a + b)³" class="mr-3">
+                                    <span>(a + b)³</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q7" value="a³ + 3a²b + 3ab² + b³" class="mr-3">
+                                    <span>a³ + 3a²b + 3ab² + b³</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вопрос 8 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg question-card">
+                    <div class="flex items-start mb-4">
+                        <span class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">8</span>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-semibold mb-4 text-gray-800">Разложите на множители: a³ - b³ = ?</h3>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q8" value="(a - b)(a² + ab + b²)" class="mr-3" required>
+                                    <span>(a - b)(a² + ab + b²)</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q8" value="(a + b)(a² - ab + b²)" class="mr-3">
+                                    <span>(a + b)(a² - ab + b²)</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q8" value="(a - b)³" class="mr-3">
+                                    <span>(a - b)³</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q8" value="a³ - 3a²b + 3ab² - b³" class="mr-3">
+                                    <span>a³ - 3a²b + 3ab² - b³</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вопрос 9 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg question-card">
+                    <div class="flex items-start mb-4">
+                        <span class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">9</span>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-semibold mb-4 text-gray-800">Упростите выражение: (x + 3)² - (x - 3)² = ?</h3>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q9" value="12x" class="mr-3" required>
+                                    <span>12x</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q9" value="6x" class="mr-3">
+                                    <span>6x</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q9" value="x² + 9" class="mr-3">
+                                    <span>x² + 9</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q9" value="18" class="mr-3">
+                                    <span>18</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вопрос 10 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg question-card">
+                    <div class="flex items-start mb-4">
+                        <span class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">10</span>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-semibold mb-4 text-gray-800">Упростите выражение: (2a + 1)(2a - 1) = ?</h3>
+                            <div class="space-y-2">
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q10" value="4a² - 1" class="mr-3" required>
+                                    <span>4a² - 1</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q10" value="4a² + 1" class="mr-3">
+                                    <span>4a² + 1</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q10" value="2a² - 1" class="mr-3">
+                                    <span>2a² - 1</span>
+                                </label>
+                                <label class="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                                    <input type="radio" name="q10" value="4a - 1" class="mr-3">
+                                    <span>4a - 1</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Кнопка отправки -->
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <button type="submit" id="submitBtn" class="w-full bg-gradient-to-r from-purple-600 to-purple-800 text-white py-4 rounded-lg font-bold text-lg hover:from-purple-700 hover:to-purple-900 transition shadow-lg">
+                        <i class="fas fa-paper-plane mr-2"></i>Отправить тест
+                    </button>
+                    <p class="text-center text-gray-600 mt-4 text-sm">
+                        Результаты будут отправлены на почту преподавателю
+                    </p>
+                </div>
+
+            </form>
+
+            <!-- Результаты (скрыты до отправки) -->
+            <div id="results" class="hidden mt-8 bg-white p-8 rounded-xl shadow-lg">
+                <h2 class="text-2xl font-bold mb-4 text-gray-800 text-center">Результаты теста</h2>
+                <div class="text-center mb-6">
+                    <div class="text-5xl font-bold mb-2" id="scoreDisplay"></div>
+                    <div class="text-gray-600" id="percentageDisplay"></div>
+                </div>
+                <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded mb-4">
+                    <p class="text-green-800" id="successMessage">
+                        <i class="fas fa-check-circle mr-2"></i>
+                        Тест успешно отправлен! Результаты отправлены на почту lotosdima@mail.ru
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2024 Репетитор по математике. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        // ============================================
+        // НАСТРОЙКИ TELEGRAM БОТА
+        // ============================================
+        // Для настройки:
+        // 1. Создайте бота через @BotFather в Telegram
+        // 2. Получите токен бота (выглядит как: 123456789:ABCdefGHIjklMNOpqrsTUVwxyz)
+        // 3. Получите ваш chat_id (можно узнать через @userinfobot или @getidsbot)
+        // 4. Замените значения ниже:
+        
+        const TELEGRAM_BOT_TOKEN = '8222323489:AAHMbK36u_wQMt79AzgLefPaV6Vp3NarXhE'; // Замените на токен вашего бота
+        const TELEGRAM_CHAT_ID = '412909027'; // Замените на ваш chat_id (можно указать несколько через запятую)
+        const USE_TELEGRAM = true; // Установите true для включения отправки в Telegram
+        
+        // ============================================
+
+        // Правильные ответы
+        const correctAnswers = {
+            q1: 'a² + 2ab + b²',
+            q2: 'a² - 2ab + b²',
+            q3: 'a² - b²',
+            q4: 'a³ + 3a²b + 3ab² + b³',
+            q5: 'a³ - 3a²b + 3ab² - b³',
+            q6: '(a + b)(a - b)',
+            q7: '(a + b)(a² - ab + b²)',
+            q8: '(a - b)(a² + ab + b²)',
+            q9: '12x',
+            q10: '4a² - 1'
+        };
+
+        // Обработка отправки формы
+        document.getElementById('testForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const submitBtn = document.getElementById('submitBtn');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Отправка...';
+
+            // Сбор данных формы
+            const formData = {
+                studentName: document.getElementById('studentName').value,
+                studentClass: document.getElementById('studentClass').value,
+                studentEmail: document.getElementById('studentEmail').value,
+                studentPhone: document.getElementById('studentPhone').value || 'Не указан',
+            };
+
+            // Подсчет результатов
+            let score = 0;
+            let totalQuestions = Object.keys(correctAnswers).length;
+            let answers = {};
+            let detailedAnswers = [];
+
+            Object.keys(correctAnswers).forEach((question, index) => {
+                const selectedAnswer = document.querySelector(`input[name="${question}"]:checked`);
+                if (selectedAnswer) {
+                    const answer = selectedAnswer.value;
+                    const questionNum = index + 1;
+                    const correctAnswer = correctAnswers[question];
+                    const isCorrect = answer === correctAnswer;
+                    
+                    answers[`Вопрос ${questionNum}`] = answer;
+                    detailedAnswers.push({
+                        question: questionNum,
+                        userAnswer: answer,
+                        correctAnswer: correctAnswer,
+                        isCorrect: isCorrect
+                    });
+                    
+                    if (isCorrect) {
+                        score++;
+                    }
+                }
+            });
+
+            const percentage = Math.round((score / totalQuestions) * 100);
+            const grade = percentage >= 90 ? 'Отлично' : 
+                         percentage >= 70 ? 'Хорошо' : 
+                         percentage >= 50 ? 'Удовлетворительно' : 'Неудовлетворительно';
+
+            // Формирование текста письма
+            let emailBody = `РЕЗУЛЬТАТЫ ТЕСТА ПО ФОРМУЛАМ СОКРАЩЕННОГО УМНОЖЕНИЯ
+
+═══════════════════════════════════════════════════════
+
+ИНФОРМАЦИЯ ОБ УЧЕНИКЕ:
+• Имя: ${formData.studentName}
+• Класс: ${formData.studentClass}
+• Email: ${formData.studentEmail}
+• Телефон: ${formData.studentPhone}
+
+═══════════════════════════════════════════════════════
+
+РЕЗУЛЬТАТЫ:
+• Правильных ответов: ${score} из ${totalQuestions}
+• Процент выполнения: ${percentage}%
+• Оценка: ${grade}
+
+═══════════════════════════════════════════════════════
+
+ДЕТАЛЬНЫЕ ОТВЕТЫ:
+
+`;
+
+            detailedAnswers.forEach((item) => {
+                const status = item.isCorrect ? '✓ ПРАВИЛЬНО' : '✗ НЕПРАВИЛЬНО';
+                emailBody += `Вопрос ${item.question}:\n`;
+                emailBody += `  Ответ ученика: ${item.userAnswer}\n`;
+                if (!item.isCorrect) {
+                    emailBody += `  Правильный ответ: ${item.correctAnswer}\n`;
+                }
+                emailBody += `  Статус: ${status}\n\n`;
+            });
+
+            emailBody += `═══════════════════════════════════════════════════════\n`;
+            emailBody += `Дата прохождения теста: ${new Date().toLocaleString('ru-RU')}\n`;
+
+            const subject = `Результаты теста: ${formData.studentName} (${formData.studentClass} класс) - ${score}/${totalQuestions} (${percentage}%)`;
+
+            // Формирование сообщения для Telegram
+            let telegramMessage = `📊 <b>РЕЗУЛЬТАТЫ ТЕСТА ПО ФОРМУЛАМ СОКРАЩЕННОГО УМНОЖЕНИЯ</b>\n\n`;
+            telegramMessage += `👤 <b>Информация об ученике:</b>\n`;
+            telegramMessage += `• Имя: ${formData.studentName}\n`;
+            telegramMessage += `• Класс: ${formData.studentClass}\n`;
+            telegramMessage += `• Email: ${formData.studentEmail}\n`;
+            telegramMessage += `• Телефон: ${formData.studentPhone}\n\n`;
+            telegramMessage += `📈 <b>Результаты:</b>\n`;
+            telegramMessage += `• Правильных ответов: <b>${score} из ${totalQuestions}</b>\n`;
+            telegramMessage += `• Процент выполнения: <b>${percentage}%</b>\n`;
+            telegramMessage += `• Оценка: <b>${grade}</b>\n\n`;
+            telegramMessage += `📝 <b>Детальные ответы:</b>\n\n`;
+
+            detailedAnswers.forEach((item) => {
+                const status = item.isCorrect ? '✅' : '❌';
+                telegramMessage += `${status} <b>Вопрос ${item.question}:</b>\n`;
+                telegramMessage += `   Ответ: ${item.userAnswer}\n`;
+                if (!item.isCorrect) {
+                    telegramMessage += `   Правильный: ${item.correctAnswer}\n`;
+                }
+                telegramMessage += `\n`;
+            });
+
+            telegramMessage += `\n🕐 Дата: ${new Date().toLocaleString('ru-RU')}`;
+
+            try {
+                let telegramSent = false;
+
+                // Способ 1: Отправка в Telegram (приоритетный способ)
+                if (USE_TELEGRAM && TELEGRAM_BOT_TOKEN !== 'YOUR_BOT_TOKEN' && TELEGRAM_CHAT_ID !== 'YOUR_CHAT_ID') {
+                    try {
+                        // Отправка в один или несколько чатов
+                        const chatIds = TELEGRAM_CHAT_ID.split(',').map(id => id.trim());
+                        
+                        for (const chatId of chatIds) {
+                            const telegramUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+                            
+                            const telegramResponse = await fetch(telegramUrl, {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify({
+                                    chat_id: chatId,
+                                    text: telegramMessage,
+                                    parse_mode: 'HTML',
+                                    disable_web_page_preview: true
+                                })
+                            });
+
+                            if (telegramResponse.ok) {
+                                telegramSent = true;
+                            }
+                        }
+
+                        if (telegramSent) {
+                            showResults(score, totalQuestions, percentage, grade, 'telegram');
+                            return;
+                        }
+                    } catch (telegramError) {
+                        console.error('Ошибка отправки в Telegram:', telegramError);
+                        // Продолжаем с другими способами
+                    }
+                }
+
+                // Способ 2: Отправка через Formspree (если Telegram не настроен)
+                // Раскомментируйте и замените YOUR_FORM_ID на ваш ID формы Formspree
+                /*
+                const formspreeResponse = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        _to: 'lotosdima@mail.ru',
+                        _subject: subject,
+                        _replyto: formData.studentEmail,
+                        message: emailBody,
+                        student_name: formData.studentName,
+                        student_class: formData.studentClass,
+                        student_email: formData.studentEmail,
+                        student_phone: formData.studentPhone,
+                        score: `${score}/${totalQuestions}`,
+                        percentage: `${percentage}%`,
+                        grade: grade
+                    })
+                });
+
+                if (formspreeResponse.ok) {
+                    showResults(score, totalQuestions, percentage, grade, 'email');
+                    return;
+                }
+                */
+
+                // Способ 3: Отправка через mailto (резервный способ)
+                const mailtoLink = `mailto:lotosdima@mail.ru?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+                
+                // Показываем результаты
+                showResults(score, totalQuestions, percentage, grade, 'mailto');
+
+                // Небольшая задержка перед открытием почтового клиента
+                setTimeout(() => {
+                    window.location.href = mailtoLink;
+                }, 500);
+
+            } catch (error) {
+                console.error('Ошибка отправки:', error);
+                // Показываем результаты даже при ошибке
+                showResults(score, totalQuestions, percentage, grade);
+                
+                // Предлагаем скопировать результаты
+                const copyText = `Тема: ${subject}\n\n${emailBody}`;
+                navigator.clipboard.writeText(copyText).then(() => {
+                    alert('Результаты скопированы в буфер обмена. Пожалуйста, отправьте их на lotosdima@mail.ru');
+                }).catch(() => {
+                    alert('Произошла ошибка. Пожалуйста, скопируйте результаты вручную и отправьте на lotosdima@mail.ru');
+                });
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            }
+        });
+
+        function showResults(score, totalQuestions, percentage, grade, method = 'mailto') {
+            document.getElementById('results').classList.remove('hidden');
+            document.getElementById('scoreDisplay').textContent = `${score}/${totalQuestions}`;
+            document.getElementById('percentageDisplay').textContent = `${percentage}% - ${grade}`;
+            
+            // Обновляем сообщение о способе отправки
+            const resultMessage = document.querySelector('#results .bg-green-50 p');
+            if (resultMessage) {
+                if (method === 'telegram') {
+                    resultMessage.innerHTML = '<i class="fab fa-telegram mr-2"></i>Результаты успешно отправлены в Telegram!';
+                } else if (method === 'email') {
+                    resultMessage.innerHTML = '<i class="fas fa-envelope mr-2"></i>Результаты успешно отправлены на почту lotosdima@mail.ru';
+                } else {
+                    resultMessage.innerHTML = '<i class="fas fa-check-circle mr-2"></i>Тест успешно отправлен! Результаты отправлены на почту lotosdima@mail.ru';
+                }
+            }
+            
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>
+

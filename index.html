@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Профессиональная подготовка к ЕГЭ по математике для учеников 10-11 классов. Индивидуальный подход, гарантия результата.">
+    <title>Репетитор по математике | Подготовка к ЕГЭ 10-11 класс</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .hover-scale { transition: transform 0.3s ease; }
+        .hover-scale:hover { transform: scale(1.05); }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Навигационное меню -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <i class="fas fa-calculator text-2xl text-purple-600 mr-2"></i>
+                    <span class="text-xl font-bold text-gray-800">Математика ЕГЭ</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-700 hover:text-purple-600 transition">О репетиторе</a>
+                    <a href="#programs" class="text-gray-700 hover:text-purple-600 transition">Программы</a>
+                    <a href="#results" class="text-gray-700 hover:text-purple-600 transition">Результаты</a>
+                    <a href="#reviews" class="text-gray-700 hover:text-purple-600 transition">Отзывы</a>
+                    <a href="test.html" class="text-purple-600 font-semibold hover:text-purple-700 transition">Тест</a>
+                    <a href="#contacts" class="text-gray-700 hover:text-purple-600 transition">Контакты</a>
+                </div>
+                <a href="#contacts" class="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition font-semibold">
+                    Записаться
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero секция с заголовком по формуле ПИСДОС -->
+    <section class="gradient-bg text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <!-- ПИСДОС заголовок -->
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                        Сдай ЕГЭ по математике на 80+ баллов за <span class="text-yellow-300">6 месяцев</span> 
+                        <span class="block mt-2">без стресса и зубрежки</span>
+                    </h1>
+                    <!-- Расшифровка ПИСДОС в подзаголовке -->
+                    <p class="text-xl mb-4 text-purple-100">
+                        ✅ <strong>Профит:</strong> Гарантированный результат 80+ баллов
+                    </p>
+                    <p class="text-xl mb-4 text-purple-100">
+                        🎯 <strong>Интрижка:</strong> Уникальная методика без скучной теории
+                    </p>
+                    <p class="text-xl mb-4 text-purple-100">
+                        ⚡ <strong>Срочность:</strong> Первые результаты уже через 2 недели
+                    </p>
+                    <p class="text-xl mb-6 text-purple-100">
+                        👥 <strong>Для вас:</strong> Только ученики 10-11 классов
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contacts" class="bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition text-center">
+                            Бесплатная консультация
+                        </a>
+                        <a href="#programs" class="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition text-center">
+                            Узнать программу
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <!-- Плейсхолдер для изображения/иллюстрации -->
+                    <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                        <div class="text-center">
+                            <i class="fas fa-chart-line text-6xl mb-4 text-yellow-300"></i>
+                            <div class="space-y-4 mt-8">
+                                <div class="flex justify-between items-center">
+                                    <span>Средний балл до занятий</span>
+                                    <span class="text-2xl font-bold">45</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-4">
+                                    <div class="bg-red-500 h-4 rounded-full" style="width: 45%"></div>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span>Средний балл после занятий</span>
+                                    <span class="text-2xl font-bold text-yellow-300">82</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-4">
+                                    <div class="bg-green-500 h-4 rounded-full" style="width: 82%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция решения проблем (боли аудитории) -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+                Знакомые проблемы? Решаем их раз и навсегда
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-red-50 p-6 rounded-xl border-l-4 border-red-500">
+                    <i class="fas fa-exclamation-triangle text-red-500 text-3xl mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2 text-gray-800">Страх перед ЕГЭ</h3>
+                    <p class="text-gray-600">"Не сдам, не поступлю, все пропало..."</p>
+                    <p class="text-sm mt-3 text-gray-700"><strong>Решение:</strong> Постепенная подготовка без стресса, уверенность в своих силах</p>
+                </div>
+                <div class="bg-orange-50 p-6 rounded-xl border-l-4 border-orange-500">
+                    <i class="fas fa-clock text-orange-500 text-3xl mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2 text-gray-800">Нехватка времени</h3>
+                    <p class="text-gray-600">"До ЕГЭ осталось мало времени, ничего не успею..."</p>
+                    <p class="text-sm mt-3 text-gray-700"><strong>Решение:</strong> Эффективная программа, максимум результата за минимум времени</p>
+                </div>
+                <div class="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500">
+                    <i class="fas fa-book text-blue-500 text-3xl mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2 text-gray-800">Сложная программа</h3>
+                    <p class="text-gray-600">"Не понимаю, как решать задачи, все запутанно..."</p>
+                    <p class="text-sm mt-3 text-gray-700"><strong>Решение:</strong> Простое объяснение сложных тем, пошаговые алгоритмы</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О репетиторе -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">О репетиторе</h2>
+                    <div class="space-y-4 text-gray-700">
+                        <div class="flex items-start">
+                            <i class="fas fa-graduation-cap text-purple-600 text-xl mr-3 mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold mb-1">Образование</h3>
+                                <p>Высшее математическое образование, опыт преподавания более 10 лет</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-trophy text-purple-600 text-xl mr-3 mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold mb-1">Достижения</h3>
+                                <p>Более 200 учеников успешно сдали ЕГЭ, средний балл 82+</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-user-graduate text-purple-600 text-xl mr-3 mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold mb-1">Специализация</h3>
+                                <p>Только 10-11 классы, фокус на ЕГЭ и профильную математику</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-heart text-purple-600 text-xl mr-3 mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold mb-1">Подход</h3>
+                                <p>Индивидуальная программа для каждого ученика, учет особенностей восприятия</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-xl">
+                    <!-- Плейсхолдер для фото репетитора -->
+                    <div class="bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl h-64 flex items-center justify-center mb-6">
+                        <i class="fas fa-user-tie text-white text-6xl"></i>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="text-3xl font-bold text-purple-600">200+</div>
+                            <div class="text-sm text-gray-600">Учеников</div>
+                        </div>
+                        <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="text-3xl font-bold text-purple-600">82</div>
+                            <div class="text-sm text-gray-600">Средний балл</div>
+                        </div>
+                        <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="text-3xl font-bold text-purple-600">10</div>
+                            <div class="text-sm text-gray-600">Лет опыта</div>
+                        </div>
+                        <div class="bg-purple-50 p-4 rounded-lg">
+                            <div class="text-3xl font-bold text-purple-600">95%</div>
+                            <div class="text-sm text-gray-600">Успешность</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Программы обучения -->
+    <section id="programs" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">Программы подготовки</h2>
+            <p class="text-center text-gray-600 mb-12">Выберите программу, которая подходит именно вам</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Базовая программа -->
+                <div class="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-purple-500 transition hover-scale">
+                    <div class="text-center mb-6">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-book text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Базовая</h3>
+                        <div class="text-3xl font-bold text-gray-800 mb-1">60+ баллов</div>
+                        <p class="text-gray-600 text-sm">Для уверенного прохождения порога</p>
+                    </div>
+                    <ul class="space-y-3 mb-6 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>2 занятия в неделю</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Разбор базовых тем</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Домашние задания</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Пробные ЕГЭ раз в месяц</span>
+                        </li>
+                    </ul>
+                    <a href="#contacts" class="block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                        Выбрать программу
+                    </a>
+                </div>
+
+                <!-- Профильная программа (выделена) -->
+                <div class="bg-gradient-to-br from-purple-600 to-purple-800 text-white rounded-2xl p-8 transform scale-105 shadow-2xl relative">
+                    <div class="absolute top-0 right-0 bg-yellow-400 text-gray-900 px-4 py-1 rounded-bl-lg rounded-tr-2xl font-bold text-sm">
+                        Популярно
+                    </div>
+                    <div class="text-center mb-6">
+                        <div class="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-star text-yellow-300 text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Профильная</h3>
+                        <div class="text-3xl font-bold mb-1">80+ баллов</div>
+                        <p class="text-purple-100 text-sm">Для поступления в топ-вузы</p>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-300 mr-2 mt-1"></i>
+                            <span>3 занятия в неделю</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-300 mr-2 mt-1"></i>
+                            <span>Все темы ЕГЭ + олимпиады</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-300 mr-2 mt-1"></i>
+                            <span>Индивидуальный план</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-300 mr-2 mt-1"></i>
+                            <span>Пробные ЕГЭ каждую неделю</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-300 mr-2 mt-1"></i>
+                            <span>Поддержка 24/7 в чате</span>
+                        </li>
+                    </ul>
+                    <a href="#contacts" class="block w-full bg-yellow-400 text-gray-900 text-center py-3 rounded-lg font-semibold hover:bg-yellow-300 transition">
+                        Выбрать программу
+                    </a>
+                </div>
+
+                <!-- Интенсивная программа -->
+                <div class="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-purple-500 transition hover-scale">
+                    <div class="text-center mb-6">
+                        <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-fire text-red-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Интенсив</h3>
+                        <div class="text-3xl font-bold text-gray-800 mb-1">90+ баллов</div>
+                        <p class="text-gray-600 text-sm">Максимальный результат</p>
+                    </div>
+                    <ul class="space-y-3 mb-6 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>4-5 занятий в неделю</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Углубленная подготовка</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Работа над ошибками</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Пробные ЕГЭ 2 раза в неделю</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Персональный ментор</span>
+                        </li>
+                    </ul>
+                    <a href="#contacts" class="block w-full bg-red-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-red-700 transition">
+                        Выбрать программу
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Результаты и статистика -->
+    <section id="results" class="py-16 bg-gradient-to-r from-purple-600 to-purple-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Результаты моих учеников</h2>
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2 text-yellow-300">82</div>
+                    <div class="text-purple-100">Средний балл ЕГЭ</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2 text-yellow-300">95%</div>
+                    <div class="text-purple-100">Сдали на 70+</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2 text-yellow-300">68%</div>
+                    <div class="text-purple-100">Сдали на 80+</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2 text-yellow-300">200+</div>
+                    <div class="text-purple-100">Успешных учеников</div>
+                </div>
+            </div>
+            
+            <!-- График результатов (плейсхолдер) -->
+            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                <h3 class="text-xl font-bold mb-6 text-center">Динамика роста баллов</h3>
+                <div class="flex items-end justify-around h-64 space-x-2">
+                    <div class="flex flex-col items-center flex-1">
+                        <div class="bg-yellow-300 w-full rounded-t" style="height: 30%"></div>
+                        <span class="text-sm mt-2">Начало</span>
+                        <span class="text-xs text-purple-200">45 баллов</span>
+                    </div>
+                    <div class="flex flex-col items-center flex-1">
+                        <div class="bg-yellow-300 w-full rounded-t" style="height: 50%"></div>
+                        <span class="text-sm mt-2">1 месяц</span>
+                        <span class="text-xs text-purple-200">58 баллов</span>
+                    </div>
+                    <div class="flex flex-col items-center flex-1">
+                        <div class="bg-yellow-300 w-full rounded-t" style="height: 70%"></div>
+                        <span class="text-sm mt-2">3 месяца</span>
+                        <span class="text-xs text-purple-200">72 балла</span>
+                    </div>
+                    <div class="flex flex-col items-center flex-1">
+                        <div class="bg-yellow-300 w-full rounded-t" style="height: 90%"></div>
+                        <span class="text-sm mt-2">6 месяцев</span>
+                        <span class="text-xs text-purple-200">82 балла</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section id="reviews" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">Отзывы учеников и родителей</h2>
+            <p class="text-center text-gray-600 mb-12">Реальные истории успеха</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-user text-purple-600"></i>
+                        </div>
+                        <div>
+                            <div class="font-semibold">Анна, 11 класс</div>
+                            <div class="text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-2">"Сдала ЕГЭ на 89 баллов! До занятий едва набирала 50. Преподаватель объясняет очень понятно, все темы разбираем до полного понимания."</p>
+                    <div class="text-sm text-purple-600 font-semibold">Результат: 89 баллов</div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-user text-purple-600"></i>
+                        </div>
+                        <div>
+                            <div class="font-semibold">Мария (мама Дмитрия)</div>
+                            <div class="text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-2">"Сын поступил в МГУ на бюджет! Занимались год, результат превзошел ожидания. Индивидуальный подход и постоянная поддержка - это то, что нужно."</p>
+                    <div class="text-sm text-purple-600 font-semibold">Результат: 94 балла, поступление в МГУ</div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-user text-purple-600"></i>
+                        </div>
+                        <div>
+                            <div class="font-semibold">Иван, 11 класс</div>
+                            <div class="text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-2">"Начал заниматься за полгода до ЕГЭ, думал что поздно. Но методика работает! Сдал на 85 баллов и поступил куда хотел."</p>
+                    <div class="text-sm text-purple-600 font-semibold">Результат: 85 баллов</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Как проходит обучение -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Как проходит обучение</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-purple-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl font-bold text-purple-600">1</span>
+                    </div>
+                    <h3 class="font-bold mb-2">Диагностика</h3>
+                    <p class="text-gray-600 text-sm">Определяем текущий уровень и слабые места</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-purple-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl font-bold text-purple-600">2</span>
+                    </div>
+                    <h3 class="font-bold mb-2">План обучения</h3>
+                    <p class="text-gray-600 text-sm">Составляем индивидуальную программу</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-purple-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl font-bold text-purple-600">3</span>
+                    </div>
+                    <h3 class="font-bold mb-2">Занятия</h3>
+                    <p class="text-gray-600 text-sm">Регулярные уроки онлайн или очно</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-purple-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl font-bold text-purple-600">4</span>
+                    </div>
+                    <h3 class="font-bold mb-2">Результат</h3>
+                    <p class="text-gray-600 text-sm">Успешная сдача ЕГЭ и поступление</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Гарантии и преимущества -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Почему выбирают меня</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <i class="fas fa-shield-alt text-purple-600 text-3xl mb-4"></i>
+                    <h3 class="font-bold mb-2">Гарантия результата</h3>
+                    <p class="text-gray-600 text-sm">Если не достигнете цели - верну деньги</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <i class="fas fa-user-friends text-purple-600 text-3xl mb-4"></i>
+                    <h3 class="font-bold mb-2">Индивидуальный подход</h3>
+                    <p class="text-gray-600 text-sm">Программа подстраивается под вас</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <i class="fas fa-clock text-purple-600 text-3xl mb-4"></i>
+                    <h3 class="font-bold mb-2">Гибкий график</h3>
+                    <p class="text-gray-600 text-sm">Занятия в удобное для вас время</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <i class="fas fa-laptop text-purple-600 text-3xl mb-4"></i>
+                    <h3 class="font-bold mb-2">Онлайн и очно</h3>
+                    <p class="text-gray-600 text-sm">Выбирайте формат обучения</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <i class="fas fa-file-alt text-purple-600 text-3xl mb-4"></i>
+                    <h3 class="font-bold mb-2">Все материалы</h3>
+                    <p class="text-gray-600 text-sm">Конспекты, тесты, пробники - все включено</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <i class="fas fa-headset text-purple-600 text-3xl mb-4"></i>
+                    <h3 class="font-bold mb-2">Поддержка 24/7</h3>
+                    <p class="text-gray-600 text-sm">Всегда на связи для вопросов</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Тест по математике -->
+    <section class="py-16 bg-gradient-to-r from-purple-600 to-purple-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-4">Проверьте свои знания</h2>
+                    <p class="text-xl mb-6 text-purple-100">
+                        Пройдите бесплатный тест по формулам сокращенного умножения и узнайте свой текущий уровень подготовки
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-300 mr-3 mt-1"></i>
+                            <span>10 вопросов по основным формулам</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-300 mr-3 mt-1"></i>
+                            <span>Мгновенные результаты</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-300 mr-3 mt-1"></i>
+                            <span>Детальный разбор ошибок</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-300 mr-3 mt-1"></i>
+                            <span>Результаты отправляются преподавателю</span>
+                        </li>
+                    </ul>
+                    <a href="test.html" class="inline-block bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition shadow-lg">
+                        <i class="fas fa-clipboard-check mr-2"></i>Пройти тест
+                    </a>
+                </div>
+                <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                    <div class="text-center">
+                        <i class="fas fa-graduation-cap text-6xl mb-6 text-yellow-300"></i>
+                        <h3 class="text-2xl font-bold mb-4">Формулы сокращенного умножения</h3>
+                        <p class="text-purple-100 mb-6">
+                            Тест охватывает все основные формулы: квадрат суммы и разности, разность квадратов, сумма и разность кубов и другие.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mt-6">
+                            <div class="bg-white/20 p-4 rounded-lg">
+                                <div class="text-3xl font-bold">10</div>
+                                <div class="text-sm text-purple-100">Вопросов</div>
+                            </div>
+                            <div class="bg-white/20 p-4 rounded-lg">
+                                <div class="text-3xl font-bold">15</div>
+                                <div class="text-sm text-purple-100">Минут</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты и форма записи -->
+    <section id="contacts" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">Запишитесь на бесплатную консультацию</h2>
+            <p class="text-center text-gray-600 mb-12">Обсудим ваши цели и составим план подготовки</p>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Форма -->
+                <div class="bg-gradient-to-br from-purple-600 to-purple-800 rounded-2xl p-8 text-white">
+                    <h3 class="text-2xl font-bold mb-6">Оставьте заявку</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block mb-2 text-purple-100">Ваше имя</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="Иван Иванов">
+                        </div>
+                        <div>
+                            <label class="block mb-2 text-purple-100">Телефон</label>
+                            <input type="tel" class="w-full px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="+7 (999) 123-45-67">
+                        </div>
+                        <div>
+                            <label class="block mb-2 text-purple-100">Email</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="ivan@example.com">
+                        </div>
+                        <div>
+                            <label class="block mb-2 text-purple-100">Класс</label>
+                            <select class="w-full px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                                <option>10 класс</option>
+                                <option>11 класс</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block mb-2 text-purple-100">Сообщение (необязательно)</label>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="Расскажите о ваших целях..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-yellow-400 text-gray-900 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition">
+                            Отправить заявку
+                        </button>
+                        <p class="text-sm text-purple-100 text-center">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p>
+                    </form>
+                </div>
+
+                <!-- Контактная информация -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">Контакты</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1 text-gray-800">Телефон</h4>
+                                <a href="tel:+79991234567" class="text-purple-600 hover:text-purple-700">+7 (999) 123-45-67</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1 text-gray-800">Email</h4>
+                                <a href="mailto:tutor@math-ege.ru" class="text-purple-600 hover:text-purple-700">tutor@math-ege.ru</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                                <i class="fab fa-telegram text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1 text-gray-800">Telegram</h4>
+                                <a href="https://t.me/math_tutor" class="text-purple-600 hover:text-purple-700">@math_tutor</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                                <i class="fab fa-vk text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1 text-gray-800">ВКонтакте</h4>
+                                <a href="https://vk.com/math_tutor" class="text-purple-600 hover:text-purple-700">vk.com/math_tutor</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 bg-purple-50 p-6 rounded-xl">
+                        <h4 class="font-bold mb-3 text-gray-800">Часы работы</h4>
+                        <div class="space-y-2 text-gray-700">
+                            <div class="flex justify-between">
+                                <span>Пн - Пт</span>
+                                <span class="font-semibold">9:00 - 21:00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Сб - Вс</span>
+                                <span class="font-semibold">10:00 - 18:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-calculator text-2xl text-purple-400 mr-2"></i>
+                        <span class="text-xl font-bold">Математика ЕГЭ</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Профессиональная подготовка к ЕГЭ по математике для учеников 10-11 классов</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Навигация</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#about" class="hover:text-white transition">О репетиторе</a></li>
+                        <li><a href="#programs" class="hover:text-white transition">Программы</a></li>
+                        <li><a href="#results" class="hover:text-white transition">Результаты</a></li>
+                        <li><a href="#reviews" class="hover:text-white transition">Отзывы</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Контакты</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>+7 (999) 123-45-67</li>
+                        <li>tutor@math-ege.ru</li>
+                        <li>@math_tutor</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Социальные сети</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-purple-600 transition">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-purple-600 transition">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-purple-600 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 Репетитор по математике. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
